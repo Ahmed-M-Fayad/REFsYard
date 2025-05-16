@@ -5,7 +5,7 @@ if (empty($_SESSION['csrf_token'])) {
 }
 
 if(isset($_SESSION["username"])){
-  header("location:home.php");
+  header("location:implementation/home.php");
   exit();
 }
 ?>
@@ -186,7 +186,7 @@ if(isset($_SESSION["username"])){
     <div class="message" id="message" role="alert" aria-live="polite"></div>
   </form>
   <div class="links">
-    <a href="register.php">Create Account</a> | <a href="forgot-password.php">Forgot Password?</a>
+    <a href="implementation/register.php">Create Account</a> | <a href="implementation/forgot-password.php">Forgot Password?</a>
   </div>
 </div>
 <script>
@@ -205,7 +205,7 @@ if(isset($_SESSION["username"])){
     messageDiv.textContent = '';
 
     try {
-      const response = await fetch('login.php', {
+      const response = await fetch('implementation/login.php', {
         method: 'POST',
         body: formData
       });

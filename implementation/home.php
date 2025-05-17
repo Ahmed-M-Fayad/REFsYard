@@ -38,7 +38,7 @@ try {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>REFsYard Bookstore</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="css/style.css?v=57">
+  <link rel="stylesheet" href="../css/style.css?v=57">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
@@ -125,12 +125,12 @@ try {
                         if (empty($books)) {
                             error_log("home_section: No books found in BOOKS table");
                             $fallback_images = [
-                                'images/new-book1.avif',
-                                'images/new-book2.jpg',
-                                'images/new-book4.jpg',
-                                'images/real-book2.jpeg',
-                                'images/real-book4.webp',
-                                'images/new-book5.webp'
+                                '../images/new-book1.avif',
+                                '../images/new-book2.jpg',
+                                '../images/new-book4.jpg',
+                                '../images/real-book2.jpeg',
+                                '../images/real-book4.webp',
+                                '../images/new-book5.webp'
                             ];
                             foreach ($fallback_images as $index => $image) {
                                 echo '<a href="#" class="swiper-slide" aria-label="Placeholder book image ' . ($index + 1) . '"><img src="' . $image . '" alt="Placeholder book cover"></a>';
@@ -139,12 +139,12 @@ try {
                     } catch (PDOException $e) {
                         error_log("home_section: Error fetching books: " . $e->getMessage());
                         $fallback_images = [
-                            'images/new-book1.avif',
-                            'images/new-book2.jpg',
-                            'images/new-book4.jpg',
-                            'images/real-book2.jpeg',
-                            'images/real-book4.webp',
-                            'images/new-book5.webp'
+                            '../images/new-book1.avif',
+                            '../images/new-book2.jpg',
+                            '../images/new-book4.jpg',
+                            '../images/real-book2.jpeg',
+                            '../images/real-book4.webp',
+                            '../images/new-book5.webp'
                         ];
                         foreach ($fallback_images as $index => $image) {
                             echo '<a href="#" class="swiper-slide" aria-label="Placeholder book image ' . ($index + 1) . '"><img src="' . $image . '" alt="Placeholder book cover"></a>';
@@ -153,7 +153,7 @@ try {
                     ?>
         </div>
       </div>
-      <img src="images/new-stand4-removebg-preview.png" class="stand" alt="Decorative book stand" aria-hidden="true">
+      <img src="../images/new-stand4-removebg-preview.png" class="stand" alt="Decorative book stand" aria-hidden="true">
     </div>
   </section>
 
@@ -253,14 +253,14 @@ try {
                     $book_id = htmlspecialchars($book['book_id']);
                     $title = htmlspecialchars($book['title']);
                     $price = number_format($book['price'], 2);
-                    $image_url = htmlspecialchars($book['image_url'] ?: 'images/new-book2.jpg');
+                    $image_url = htmlspecialchars($book['image_url'] ?: '../images/new-book2.jpg');
                     $old_price = number_format($book['price'] + 5, 2);
                     ?>
         <div class="swiper-slide box">
           <a href="book_details.php?book_id=<?php echo urlencode($book_id); ?>" class="image"
             aria-label="View details for <?php echo $title; ?>">
             <img src="<?php echo $image_url; ?>" alt="Book cover for <?php echo $title; ?>"
-              onerror="this.src='images/new-book2.jpg';">
+              onerror="this.src='../images/new-book2.jpg';">
           </a>
           <div class="content">
             <h3><?php echo $title; ?></h3>
@@ -290,14 +290,14 @@ try {
                     $book_id = htmlspecialchars($book['book_id']);
                     $title = htmlspecialchars($book['title']);
                     $price = number_format($book['price'], 2);
-                    $image_url = htmlspecialchars($book['image_url'] ?: 'images/new-book2.jpg');
+                    $image_url = htmlspecialchars($book['image_url'] ?: '../images/new-book2.jpg');
                     $old_price = number_format($book['price'] + 5, 2);
                     ?>
         <div class="swiper-slide box">
           <a href="book_details.php?book_id=<?php echo urlencode($book_id); ?>" class="image"
             aria-label="View details for <?php echo $title; ?>">
             <img src="<?php echo $image_url; ?>" alt="Book cover for <?php echo $title; ?>"
-              onerror="this.src='images/new-book2.jpg';">
+              onerror="this.src='../images/new-book2.jpg';">
           </a>
           <div class="content">
             <h3><?php echo $title; ?></h3>
@@ -456,7 +456,7 @@ try {
       <a href="book_details.php?book_id=2" class="btn" aria-label="Shop deal of the day">Shop Now</a>
     </div>
     <div class="image">
-      <img src="images/new-book2.jpg" alt="Book deal promotional image">
+      <img src="../images/new-book2.jpg" alt="Book deal promotional image">
     </div>
   </section>
 
@@ -466,7 +466,7 @@ try {
     <div class="reviews-slider swiper" role="region" aria-label="Customer reviews slider">
       <div class="swiper-wrapper">
         <div class="swiper-slide box">
-          <img src="images/client1.jpg" alt="John Doe">
+          <img src="../images/client1.jpg" alt="John Doe">
           <h3>John Doe</h3>
           <p>"I absolutely love the collection of books at this store! The recommendations were spot on."</p>
           <div class="stars" aria-label="4.5 out of 5 stars">
@@ -476,7 +476,7 @@ try {
           </div>
         </div>
         <div class="swiper-slide box">
-          <img src="images/client2.jpg" alt="Charl Lee">
+          <img src="../images/client2.jpg" alt="Charl Lee">
           <h3>Charl Lee</h3>
           <p>"The customer service was amazing! I received my books quickly, and the quality was perfect."</p>
           <div class="stars" aria-label="4.5 out of 5 stars">
@@ -486,7 +486,7 @@ try {
           </div>
         </div>
         <div class="swiper-slide box">
-          <img src="images/client3.jpg" alt="Michael Smith">
+          <img src="../images/client3.jpg" alt="Michael Smith">
           <h3>Michael Smith</h3>
           <p>"A fantastic selection of books for every genre! The website is easy to navigate."</p>
           <div class="stars" aria-label="5 out of 5 stars">
@@ -496,7 +496,7 @@ try {
           </div>
         </div>
         <div class="swiper-slide box">
-          <img src="images/client4.jpg" alt="Emily Davis">
+          <img src="../images/client4.jpg" alt="Emily Davis">
           <h3>Emily Davis</h3>
           <p>"Great experience buying books here. The checkout process was smooth."</p>
           <div class="stars" aria-label="4.5 out of 5 stars">
@@ -506,7 +506,7 @@ try {
           </div>
         </div>
         <div class="swiper-slide box">
-          <img src="images/client5.jpg" alt="Chris Johnson">
+          <img src="../images/client5.jpg" alt="Chris Johnson">
           <h3>Chris Johnson</h3>
           <p>"The variety of books here is amazing. I always find what I need."</p>
           <div class="stars" aria-label="5 out of 5 stars">
@@ -526,7 +526,7 @@ try {
       <div class="swiper-wrapper">
         <div class="swiper-slide box">
           <div class="image">
-            <img src="images/post-img1.jpg" alt="Fantasy books blog post">
+            <img src="../images/post-img1.jpg" alt="Fantasy books blog post">
           </div>
           <div class="content">
             <h3>Exploring the Best Fantasy Books of 2025</h3>
@@ -537,7 +537,7 @@ try {
         </div>
         <div class="swiper-slide box">
           <div class="image">
-            <img src="images/post-img3.jpg" alt="Bestsellers blog post">
+            <img src="../images/post-img3.jpg" alt="Bestsellers blog post">
           </div>
           <div class="content">
             <h3>How to Choose Your Next Bestsellers</h3>
@@ -548,7 +548,7 @@ try {
         </div>
         <div class="swiper-slide box">
           <div class="image">
-            <img src="images/post-img2.jpg" alt="Creativity books blog post">
+            <img src="../images/post-img2.jpg" alt="Creativity books blog post">
           </div>
           <div class="content">
             <h3>5 Books to Inspire Your Creativity</h3>
@@ -559,7 +559,7 @@ try {
         </div>
         <div class="swiper-slide box">
           <div class="image">
-            <img src="images/blog.jpg" alt="Library building blog post">
+            <img src="../images/blog.jpg" alt="Library building blog post">
           </div>
           <div class="content">
             <h3>The Ultimate Guide to Building a Library</h3>
@@ -733,7 +733,7 @@ try {
 
   });
   </script>
-  <script defer src="js/main.js?v=61"></script>
+  <script defer src="../js/main.js?v=61"></script>
 </body>
 
 </html>

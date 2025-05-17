@@ -20,7 +20,7 @@ if (empty($_SESSION['csrf_token'])) {
     }
     body {
       font-family: 'Inter', sans-serif;
-      background: url(images/cover2.jpg) no-repeat center center fixed;
+      background: url(../images/cover2.jpg) no-repeat center center fixed;
       background-size: cover;
       display: flex;
       justify-content: center;

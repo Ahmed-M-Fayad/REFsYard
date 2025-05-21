@@ -1,0 +1,96 @@
+/* General styling for the page */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.thank-you {
+  max-width: 800px;
+  margin: 10rem auto;
+  background: #fff;
+  padding: 3rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+.thank-you h1 {
+  font-size: 3rem;
+  color: #4fb578;
+  margin-bottom: 1rem;
+  opacity: 0;
+  animation: slideIn 1s forwards 0.5s; /* Animation for title */
+}
+
+.thank-you p {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: fadeIn 1s forwards 1s; /* Fade-in for message */
+}
+
+.success-icon {
+  font-size: 3rem;
+  color: #4fb578;
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: bounceIn 1s forwards 1.5s; /* Animation for the check icon */
+}
+
+.thank-you a {
+  font-size: 1.2rem;
+  color: #4fb578;
+  text-decoration: none;
+  border: 2px solid #4fb578;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  opacity: 0;
+  animation: fadeIn 1s forwards 2s; /* Fade-in for button */
+}
+
+.thank-you a:hover {
+  background-color: #4fb578;
+  color: white;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+      transform: translateY(-50px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+      transform: scale(0);
+      opacity: 0;
+  }
+  50% {
+      transform: scale(1.1);
+      opacity: 1;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+}

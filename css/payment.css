@@ -1,0 +1,182 @@
+/* General payment method styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.payment-method {
+  padding: 3rem 2rem;
+  max-width: 800px;
+  margin: 4rem auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.payment-method .heading {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.payment-options {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+}
+
+.payment-option {
+  text-align: center;
+}
+
+.payment-option input {
+  display: none;
+}
+
+.payment-option label {
+  display: block;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 1rem;
+  background: #f8f8f8;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.payment-option label:hover {
+  background: #e0e0e0;
+}
+
+.payment-option input:checked + label {
+  background: #6dcb78;
+  color: #fff;
+}
+
+.payment-option img {
+  width: 60px;  /* Adjust the size as needed */
+  height: 40px; /* Adjust the size as needed */
+  object-fit: contain; /* Ensures the aspect ratio is maintained */
+}
+
+/* Credit Card Form Styling */
+.credit-card-form, .paypal-form, .bank-transfer-form {
+  display: none;
+  margin-bottom: 2rem;
+}
+
+.credit-card-form input,
+.paypal-form input,
+.bank-transfer-form input,
+.paypal-form select {
+  width: 100%;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.credit-card-form .input-group,
+.paypal-form .input-group,
+.bank-transfer-form .input-group {
+  margin-bottom: 1rem;
+}
+
+.credit-card-form h3,
+.paypal-form h3,
+.bank-transfer-form h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* PayPal Form Styling */
+.paypal-form {
+  display: none;
+}
+
+.paypal-form h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.paypal-form p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.paypal-form .input-group {
+  margin-bottom: 1.5rem;
+}
+
+.paypal-form .input-group input {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+/* Bank Transfer Form Styling */
+.bank-transfer-form {
+  display: none;
+}
+
+.bank-transfer-form h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.bank-transfer-form p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.bank-transfer-form .input-group {
+  margin-bottom: 1.5rem;
+}
+
+.bank-transfer-form .input-group input {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+.bank-transfer-form .input-group label {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  padding: 1rem;
+  background: #4fb578;
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background: #4e9c45;
+}
+
+/* Additional Styles for PayPal and Bank Transfer Forms */
+.paypal-form p,
+.bank-transfer-form p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.bank-transfer-form p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #333;
+}

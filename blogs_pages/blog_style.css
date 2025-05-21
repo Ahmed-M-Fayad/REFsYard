@@ -1,0 +1,51 @@
+body {
+  font-family: Georgia, serif;
+  background: #fafafa;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+.blog-container {
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.blog-container img {
+  width: 100%;
+  height: auto;
+  margin: 20px 0;
+  border-radius: 8px;
+}
+
+.blog-container h1 {
+  font-size: 2rem;
+  color: #444;
+}
+
+.blog-container .meta {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.blog-container p {
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #ff4e50;
+  font-weight: bold;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
